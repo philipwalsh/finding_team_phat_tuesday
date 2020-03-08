@@ -46,9 +46,12 @@ as my final set of images
 
 ## My Results
 
-The model did not perform well during training.  Ugly looking metrics.
+The model performed ok during training.  I have seen worse metrics.
 
 ![metrics loss](images/readme/metrics_loss.JPG)
+
+The test accuracy never got above 86% but that is probably due to the fact that I began with a very small training set.
+
 ![metrics accuracy](images/readme/metrics_accuracy.JPG)
 
 But as the saying goes, 
