@@ -75,14 +75,13 @@ I am trying to minimize class 0 being classified as class 1
 
 My diagonals look good.
 
-Phat Tuesdays Found
+**Phat classified correctly**
+
 21 Class 1's predicted class 1.  True Positives.  True Phat Tuesday.
 
-Non Phat misclassified as Phat
-2 Class 0's poredicted class 1.  False Positives.  True Non Phat Tuesdays
+**Non Phat misclassified as Phat**
 
-
-
+2 Class 0's predicted class 1.  False Positives.  True Non Phat Tuesdays
 
 ## Summary ##
 This current attempt at classifying Team Phat Tuesday, based on the metrics, performed failry well during the training phase.  I was able to use the model and do some classifications on the hold out (test) set.  If I were pouring over tens of thousands of images (which is exactly what happens during and after PMC weekend), looking for my friends on Team Phat Tuesday, I believe this model will help me get to the pics quicker.
