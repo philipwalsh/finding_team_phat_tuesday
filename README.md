@@ -54,7 +54,7 @@ The test accuracy never got above 86% but that is probably due to the fact that 
 
 ![metrics accuracy](images/readme/metrics_accuracy.JPG)
 
-But as the saying goes, 
+as the saying goes, 
 ```
 all models are wrong but some are useful
 ```
