@@ -1,16 +1,20 @@
-# Phat Phinder
+# Finding Team Phat Tuesday
 
-Building off of my previous image classifer, Finding Kermit, this is basically a copy paste of the previous work with different training images.  
-
+Image classification with TensorFlow 2.0
 
 **The Goal**
 
-The goal of this classifier is to identify PMC Phat Tuesday photos from PMC Non-Phat Tuesday photos.  
+The goal of this classifier is to identify PMC Team Phat Tuesday photos from PMC Non-Phat Tuesday photos.  
 
 ![team phat tuesday](images/readme/_phat-1.JPG)
 
 
 *note: PMC aka the Pan Mass Challenge is the best charity, supporting the Dana Farber and fighting cancer.  For more information on the PMC, I have provided a link at the bottom of this readme.*
+
+If you find this repo helpful, or if you want to be part of the solution please consider donating to the Pam Mass Challenge
+
+[Donate to the Pan Mass Challenge](https://donate.pmc.org/BM0248/)
+
 
 
 Many teams in the PMC decorate their helmets for easy on road identification of team members.  Phat Tuesday employs various mechanisms for team identification.  Mardi Gras beads, a colorful helmet attachment thing (mask and feathers typically) and the signature riding jersey that changes slightly from year to year.
@@ -52,46 +56,33 @@ But as the saying goes,
 all models are wrong but some are useful
 ```
 
-I will continue with this ugly model and see if it can be of some use. 
+I will continue with this ugly model and see if it can be of some use
 
-I saved that best model via the checkpoint call back and reloaded that model for the below metrics.
+I saved that best model via the checkpoint call back and reloaded that model for the below metrics
 
+Looking for a high precision on class 1
 
-If I set the my threshold at 50%, as a stating point, not concerned with precision or recall yet.
+I am ok with a few class 1 being classified as class 0
 
+I am trying to minimize class 0 being classified as class 1
 
-![classification report at > 50%](images/readme/class_report.JPG)
+![set the threshold at > 95%](images/readme/confusion_matrix_95_001.JPG)
+![set the threshold at > 95%](images/readme/confusion_matrix_95_002.JPG)
+![set the threshold at > 95%](images/readme/confusion_matrix_95_003.JPG)
 
+My diagonals look good.
 
-![set the threshold at > 50%](images/readme/confusion_matrix_50.JPG)
+Phat Tuesdays Found
+21 Class 1's predicted class 1.  True Positives.  True Phat Tuesday.
 
-9 of the 50 were mis-classified
-
-6 false positives.  Meaning 6 phat were classified as non-phat
-
-3 false negatives.  Meaning 3 non-phat were classifed as phat
-
-
-If I set the my threshold at 95%, meaning I want more precision on the classification of positive results.  My false positives should drop but I will suffer on false negatives.  More true results with slip through my precise targeting.  Casting a very small net.
-
-![set the threshold at > 95%](images/readme/confusion_matrix_95.JPG)
-
-1 false positive.  Meaning 1 phat was classified as non-phat
-
-7 false negatives.  Meaning 7 non-phat were classifed as phat
-
-If I set the my threshold at 5%
-I am casting a very wide net.  trying to classify as many non-phat(s) as we can at the expense of more false positives.
-
-![set the threshold at > 5%](images/readme/confusion_matrix_05.JPG)
+Non Phat misclassified as Phat
+2 Class 0's poredicted class 1.  False Positives.  True Non Phat Tuesdays
 
 
-13 false positives.  Meaning 13 phat were classified as non-phat
 
-2 false negatives.  Meaning 2 non-phat were classifed as phat.  exactly the metric we were trying to minimize.
 
 ## Summary ##
-This current attempt at classifying Team Phat Tuesday, based on the metrics, didn't perform very well during the training phase.  I was still able to use the model and do some classifications.  If I were pouring over tens of thousands of images (which is exactly what happens after PMC weekend), looking for my friends on Team Phat Tuesday, I believe this model will help me get to the pics quicker.
+This current attempt at classifying Team Phat Tuesday, based on the metrics, performed failry well during the training phase.  I was able to use the model and do some classifications on the hold out (test) set.  If I were pouring over tens of thousands of images (which is exactly what happens during and after PMC weekend), looking for my friends on Team Phat Tuesday, I believe this model will help me get to the pics quicker.
 
 ## Running My Code
 
@@ -99,7 +90,7 @@ This current attempt at classifying Team Phat Tuesday, based on the metrics, did
 
 you will need the jupyter notebook
 ```
-phat_phinder.ipynb
+finding_team_phat_tuesday.ipynb
 ```
 and the images
 ```
@@ -117,14 +108,13 @@ and a few basic packages in your environment
 If you want my exact env, you could re-create it from the provided .yml
 
 ```
-conda env create -f phat_phinder.yml
+conda env create -f phat_environment.yml
 ```
 
 *note: I didn't create a minimalist env specifically for this project so there will be extra packages in my env that aren't necessary so this is not recommended*
 
-
 ## See Also
 
+* [Donate to the Pan Mass Challenge](https://donate.pmc.org/BM0248/)
 * [Visit my linkedIn page](https://www.linkedin.com/in/therealphilwalsh/)
-* [Pan Mass Challenge](https://www.pmc.org)
 * [Team Phat Tuesday](https://phattuesday.org/)
