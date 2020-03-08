@@ -86,7 +86,9 @@ My diagonals look good.
 2 Class 0's predicted class 1.  False Positives.  True Non Phat Tuesdays
 
 ## Summary ##
-This current attempt at classifying Team Phat Tuesday, based on the metrics, performed failry well during the training phase.  I was able to use the model and do some classifications on the hold out (test) set.  If I were pouring over tens of thousands of images (which is exactly what happens during and after PMC weekend), looking for my friends on Team Phat Tuesday, I believe this model will help me get to the pics quicker.
+I had a lot of fun with this project.  I was able to use the model and do some classifications on the hold out (test) set.  If I were pouring over tens of thousands of images (which is exactly what happens during and after PMC weekend), looking for my friends on Team Phat Tuesday, I believe this model will help me get to the pics quicker.
+
+[Donate to the Pan Mass Challenge](https://donate.pmc.org/BM0248/)
 
 ## Running My Code
 
