@@ -59,7 +59,7 @@ But as the saying goes,
 all models are wrong but some are useful
 ```
 
-I will continue with this ugly model and see if it can be of some use
+I will continue with this model and see if it can be of some use
 
 I saved that best model via the checkpoint call back and reloaded that model for the below metrics
 
