@@ -63,13 +63,13 @@ I will continue with this model and see if it can be of some use
 
 I saved that best model via the checkpoint call back and reloaded that model for the below metrics
 
-Looking for a high precision on class 1
+I am looking for a high precision on class 1
+
+![set the threshold at > 95%](images/readme/confusion_matrix_95_001.JPG)
 
 I am ok with a few class 1 being classified as class 0
 
 I am trying to minimize class 0 being classified as class 1
-
-![set the threshold at > 95%](images/readme/confusion_matrix_95_001.JPG)
 
 ![set the threshold at > 95%](images/readme/confusion_matrix_95_002.JPG)
 
