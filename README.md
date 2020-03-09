@@ -11,7 +11,7 @@ The goal of this classifier is to identify PMC Team Phat Tuesday photos from PMC
 
 *note: PMC aka the Pan Mass Challenge is the best charity, supporting the Dana Farber and fighting cancer.  For more information on the PMC, I have provided a link at the bottom of this readme.*
 
-If you find this repo helpful, or if you want to be part of the solution please consider donating to the Pam Mass Challenge
+If you find this repo helpful, or if you want to be part of the solution please consider donating to the Pan Mass Challenge
 
 [Donate to the Pan Mass Challenge](https://donate.pmc.org/BM0248/)
 
